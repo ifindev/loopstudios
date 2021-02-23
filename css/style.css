@@ -116,7 +116,7 @@ img {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  padding: 2rem 1.5rem;
+  padding: 4rem 4rem;
   z-index: 30;
   background-color: #000;
   animation: fadein 0.5s ease;
@@ -149,16 +149,16 @@ img {
 
 .hidden-nav li {
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 5rem;
 }
 
 .hidden-nav li:not(:last-child) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .close-icon {
-  width: 30px;
-  height: 30px;
+  width: 80px;
+  height: 80px;
   color: #fff;
 }
 
@@ -360,7 +360,7 @@ footer {
 }
 /* utils */
 .text-lg {
-  font-size: 2rem;
+  font-size: 5rem;
 }
 
 .hide {
