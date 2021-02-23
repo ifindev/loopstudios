@@ -379,7 +379,7 @@ footer {
 }
 
 /* responsive */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .nav-header {
     height: 100vh;
     padding: 3rem 6.5rem;
