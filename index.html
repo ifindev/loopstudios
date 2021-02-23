@@ -170,7 +170,7 @@
 
         body.style.overflowY = "hidden";
         hiddenNav.classList.remove("hide");
-        hiddenNav.classList.remove("fade-right");
+        // hiddenNav.classList.remove("fade-right");
       }
 
       const hideHiddenMenu = () => {
@@ -179,10 +179,11 @@
 
         body.style.overflowY = "scroll";
 
-        hiddenNav.classList.add("fade-right");
-        setTimeout(() => {
-          hiddenNav.classList.add("hide");
-        }, 400);
+        // hiddenNav.classList.add("fade-right");
+        hiddenNav.classList.add("hide");
+        // setTimeout(() => {
+        //   hiddenNav.classList.add("hide");
+        // }, 400);
       };
     </script>
   </body>
