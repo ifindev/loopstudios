@@ -1,0 +1,644 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:focus,
+*:hover {
+  outline: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* hide scroll bar but still functioning */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  display: block;
+}
+
+.nav-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 2rem 1.5rem;
+  z-index: 1;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  /* Background image is fixed in the viewport so that it doesn't move when
+  the content's height is greater than the image's height */
+  background-attachment: fixed;
+  /* This is what makes the background image rescale based
+  on the container's size */
+  background-size: cover;
+  /* Set a background color that will be displayed
+  while the background image is loading */
+  background-color: #464646;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Alata";
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 1rem;
+  width: auto;
+}
+
+.hamburger:hover {
+  cursor: pointer;
+}
+
+.line {
+  background-color: #fff;
+  height: 0.16rem;
+  width: 1.7rem;
+}
+
+.line:not(:last-child) {
+  margin-bottom: 0.1rem;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.hero {
+  margin-top: 8rem;
+  border: 0.1rem solid #fff;
+  padding: 1.5rem;
+  width: 100%;
+  height: 60vw;
+}
+
+.hero-text {
+  color: #fff;
+  font-family: "Josefin Sans";
+  font-size: 10vw;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.hidden-menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem 1.5rem;
+  z-index: 30;
+  background-color: #000;
+  animation: fadein 0.5s ease;
+}
+
+@keyframes fadein {
+  0% {
+    margin-left: 100vw;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.hidden-menu > ul > li {
+  list-style: none;
+  font-family: "Josefin Sans";
+}
+
+.hidden-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden-nav {
+  margin-top: 10rem;
+}
+
+.hidden-nav li {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.hidden-nav li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.close-icon {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+.showcase {
+  background-color: #fff;
+  height: 100vh;
+  margin-top: 7rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.showcase img {
+  width: 100%;
+  min-height: 30%;
+}
+
+.showcase-desc {
+  margin: 2.3rem 2rem 0 2rem;
+}
+
+.showcase-title {
+  font-family: "Josefin Sans";
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 7vw;
+  line-height: 1.2;
+  letter-spacing: 0.2rem;
+}
+
+.showcase-detail {
+  margin-top: 1rem;
+  font-family: "Alata";
+  line-height: 2;
+  letter-spacing: 0.1rem;
+  color: #7d7d7d;
+}
+
+.desktop-showcase {
+  display: none;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: 7rem 0 5rem 0;
+  padding: 0 2rem;
+}
+
+.products-title {
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 7vw;
+  margin-bottom: 3rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.desktop-btn {
+  display: none;
+}
+
+.product-card {
+  padding: 18vw 0 0 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  height: 35vw;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  font-size: 6vw;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.earth {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mobile/image-deep-earth.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.arcade {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mobile/image-night-arcade.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.soccer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mobile/image-soccer-team.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.grid {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mobile/image-grid.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.up-above {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mobile/image-from-above.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.pocket-borealis {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mobile/image-pocket-borealis.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.curiosity {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mobile/image-curiosity.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.fisheye {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/mobile/image-fisheye.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.mobile-btn {
+  height: 3rem;
+  width: 9rem;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  border: 0.1rem solid #000;
+  border-radius: 0.1rem;
+}
+
+.mobile-btn:hover {
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem 4rem 2rem;
+  height: auto;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-title {
+  font-family: "Alata";
+  margin-bottom: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Alata";
+}
+
+.footer-nav li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.footer-nav li:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4rem;
+  width: 45%;
+}
+
+.copyright {
+  margin-top: 2rem;
+  font-family: "Josefin Sans";
+}
+/* utils */
+.text-lg {
+  font-size: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+.fade-right {
+  animation: faderight 0.5s ease;
+}
+
+@keyframes faderight {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: 100vw;
+  }
+}
+
+/* responsive */
+@media only screen and (min-width: 768px) {
+  .nav-header {
+    height: 100vh;
+    padding: 3rem 6.5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    font-family: "Alata";
+    font-size: 1rem;
+    list-style: none;
+  }
+
+  .desktop-nav li:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  .nav-link {
+    position: relative;
+    display: block;
+  }
+
+  .nav-link:active::after {
+    /* border-bottom: 3px solid transparent; */
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 10px;
+    bottom: -6px;
+  }
+
+  .hero {
+    width: 55%;
+    height: auto;
+  }
+
+  .hero-text {
+    font-size: 4.5vw;
+    letter-spacing: 0.5rem;
+  }
+
+  .showcase {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 620px;
+    margin: 10rem 6.5rem;
+    padding: 0;
+  }
+
+  .mobile-showcase {
+    display: none;
+  }
+
+  .desktop-showcase {
+    display: block;
+    width: 200px;
+    height: 420px;
+  }
+
+  .showcase-desc {
+    position: absolute;
+    background-color: #fff;
+    padding: 90px;
+    width: 640px;
+    height: 450px;
+    left: 450px;
+    top: 150px;
+  }
+
+  .showcase-title {
+    font-size: 3rem;
+  }
+
+  .showcase-detail {
+    text-align: left;
+  }
+
+  .products {
+    margin: 10rem 6.5rem;
+  }
+
+  .mobile-btn {
+    display: none;
+  }
+
+  .product-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+  }
+
+  .desktop-btn {
+    display: block;
+    height: 3rem;
+    width: 9rem;
+    font-family: "Josefin Sans";
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    border: 0.1rem solid #000;
+    border-radius: 0.1rem;
+  }
+
+  .desktop-btn:active,
+  .desktop-btn:hover {
+    cursor: pointer;
+  }
+
+  .desktop-btn:active {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .products-title {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+  }
+
+  .product-card {
+    width: 240px;
+    height: 450px;
+    font-size: 32px;
+    padding: 22rem 0 0 1rem;
+    line-height: 1.2;
+  }
+
+  .earth {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-deep-earth.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .arcade {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-night-arcade.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .soccer {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-soccer-team.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .grid {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-grid.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .up-above {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-from-above.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .pocket-borealis {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-pocket-borealis.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .curiosity {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-curiosity.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .fisheye {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/desktop/image-fisheye.jpg");
+    background-repeat: no-repeat;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 160px;
+    padding: 48px 140px;
+  }
+
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  .footer-title {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+  }
+
+  .footer-nav li {
+    font-size: 0.9rem;
+  }
+
+  .footer-nav li:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 1.7rem;
+  }
+
+  .social-media {
+    margin-top: 0;
+    justify-content: space-between;
+    width: 65%;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 80px;
+  }
+
+  .copyright {
+    margin-top: 0;
+  }
+}

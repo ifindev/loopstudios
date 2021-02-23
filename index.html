@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <link rel="stylesheet" href="css/style.css" />
+
+  <body>
+    <header class="nav-header">
+      <div class="nav-top">
+        <h1 class="logo">loopstudios</h1>
+        <div class="hamburger" onclick="showHiddenMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <ul class="desktop-nav">
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Careers</a></li>
+          <li><a href="#" class="nav-link">Events</a></li>
+          <li><a href="#" class="nav-link">Products</a></li>
+          <li><a href="#" class="nav-link">Supports</a></li>
+        </ul>
+      </div>
+      <div class="hero">
+        <p class="hero-text">
+          immersive <br />
+          experiences <br />
+          that <br />deliver
+        </p>
+      </div>
+    </header>
+    <nav class="hidden-menu hide">
+      <div class="hidden-logo">
+        <h1 class="logo text-lg">loopstudios</h1>
+        <div class="close-icon" onclick="hideHiddenMenu()">
+          <svg
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </div>
+      </div>
+      <ul class="hidden-nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Supports</a></li>
+      </ul>
+    </nav>
+
+    <section class="showcase">
+      <img
+        src="img/mobile/image-interactive.jpg"
+        alt="interactive"
+        class="mobile-showcase"
+      />
+      <img
+        src="img/desktop/image-interactive.jpg"
+        alt="interactive"
+        class="desktop-showcase"
+      />
+      <div class="showcase-desc">
+        <h1 class="showcase-title">
+          The Leader in <br />
+          Interactive VR
+        </h1>
+        <p class="showcase-detail">
+          Founded in 2011, Loopstudios has been producing world-class virtual
+          reality projects for some of the best company around the globe. Our
+          award-winning creations have transformed businesses through digital
+          experiences that bind to their brand.
+        </p>
+      </div>
+    </section>
+
+    <section class="products">
+      <div class="product-header">
+        <h1 class="products-title">our creations</h1>
+        <button class="desktop-btn">See all</button>
+      </div>
+      <div class="cards-container">
+        <div class="product-card earth">
+          Deep <br />
+          Earth
+        </div>
+        <div class="product-card arcade">
+          Night <br />
+          Arcade
+        </div>
+        <div class="product-card soccer">
+          Soccer <br />
+          Team VR
+        </div>
+        <div class="product-card grid">
+          The <br />
+          Grid
+        </div>
+        <div class="product-card up-above">
+          From up<br />
+          above vr
+        </div>
+        <div class="product-card pocket-borealis">
+          pocket <br />
+          borealis
+        </div>
+        <div class="product-card curiosity">
+          The <br />
+          curiosity
+        </div>
+        <div class="product-card fisheye">
+          Make it <br />
+          fisheye
+        </div>
+      </div>
+
+      <button class="mobile-btn">See all</button>
+    </section>
+
+    <footer>
+      <div class="footer-left">
+        <h1 class="footer-title">loopstudios</h1>
+        <ul class="footer-nav">
+          <li><a href="#" class="nav-link">About</a></li>
+          <li><a href="#" class="nav-link">Careers</a></li>
+          <li><a href="#" class="nav-link">Events</a></li>
+          <li><a href="#" class="nav-link">Products</a></li>
+          <li><a href="#" class="nav-link">Supports</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <div class="social-media">
+          <a href="#" class="nav-link"
+            ><img src="img/icons/icon-facebook.svg" alt=""
+          /></a>
+          <a href="#" class="nav-link"
+            ><img src="img/icons/icon-twitter.svg" alt=""
+          /></a>
+          <a href="#" class="nav-link"
+            ><img src="img/icons/icon-pinterest.svg" alt=""
+          /></a>
+          <a href="#" class="nav-link"
+            ><img src="img/icons/icon-instagram.svg" alt=""
+          /></a>
+        </div>
+        <div class="copyright">
+          &#169; 2021 Loopstudios. All right reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function showHiddenMenu() {
+        let hiddenNav = document.getElementsByClassName("hidden-menu").item(0);
+        let body = document.getElementsByTagName("body").item(0);
+
+        body.style.overflowY = "hidden";
+        hiddenNav.classList.remove("hide");
+        hiddenNav.classList.remove("fade-right");
+      }
+
+      const hideHiddenMenu = () => {
+        let hiddenNav = document.getElementsByClassName("hidden-menu").item(0);
+        let body = document.getElementsByTagName("body").item(0);
+
+        body.style.overflowY = "scroll";
+
+        hiddenNav.classList.add("fade-right");
+        setTimeout(() => {
+          hiddenNav.classList.add("hide");
+        }, 350);
+      };
+    </script>
+  </body>
+</html>
